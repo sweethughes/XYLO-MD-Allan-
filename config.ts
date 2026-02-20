@@ -7,12 +7,13 @@ interface ConfigCache {
   MODE?: string
   CREATOR?: string
   OWNER_NUMBERS?: string[]
-  MONGODB_URI?: string
   BOT_NAME?: string
   FOOTER?: string
   ANTIDELETE_MODE?: string
   AUTOVIEW_STATUS?: boolean
   AUTOLIKE_STATUS?: boolean
+  AUTOREACT?: boolean
+  CUSTOM_REACT_EMOJIS?: string
 }
 
 const defaults: Record<string, any> = {
@@ -20,13 +21,19 @@ const defaults: Record<string, any> = {
   MODE: 'public',
   CREATOR: '2349133354644',
   OWNER_NUMBERS: ['2349133354644'],
-  MONGODB_URI: 'mongodb+srv://bluekenny619:JqtCoC4pnRMu6dNK@cluster0.tqepbsr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',
   BOT_NAME: '𝐗𝐘𝐋𝐎-𝐌𝐃',
-  FOOTER: '> © 𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐃𝐀𝐕𝐈𝐃𝐗𝐓𝐄𝐂𝐇',
+  FOOTER: ' © 𝒑𝒐𝒘𝒆𝒓𝒆𝒅 𝒃𝒚 𝑫𝒂𝒗𝒊𝒅𝑿𝑻𝒆𝒄𝒉',
   ANTIDELETE_MODE: 'off',
+  ANTIDELETE_SCOPE: 'all',
+  ANTIDSTATUS_MODE: 'off',
   AUTOVIEW_STATUS: false,
   AUTOLIKE_STATUS: false,
-  MENU_THEME: 'random' //select available 1-5 or leave random for random 
+  AUTOREACT: false,
+  CUSTOM_REACT_EMOJIS: '',
+  MENU_THEME: 'random',
+  ALWAYS_ONLINE: false,
+  AUTO_TYPING: false,
+  AUTO_RECORDING: false
 }
 
 let cache: ConfigCache = {}
